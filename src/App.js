@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 import "./styles.css";
 import image from "./v1016-b-08.jpg"; 
 
