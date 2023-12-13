@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./styles.css";
-import image from "./v1016-b-08.jpg"; 
 
 
 function Square0({ value, onSquareClick }) {
@@ -98,7 +97,6 @@ function Board({ xIsNext, squares, onPlay }) {
   }
 
   return (
-    <div style={{backgroundImage: `url(${image})`}}>
       <div className="tabuleiroMatrix">
         <div className="tabuleiro">
           <div className="placar">
@@ -153,7 +151,7 @@ function Board({ xIsNext, squares, onPlay }) {
 
           <hr color="aliceblue" className="linha" />
           <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-          <div className="status">{status}</div>
+          <div className="status" style={{color: "white"}}>{status}</div>
       <div className="board-row">
         <Square0 value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square1 value={squares[1]} onSquareClick={() => handleClick(1)} />
@@ -174,7 +172,6 @@ function Board({ xIsNext, squares, onPlay }) {
       </div>
           </div>
 
-    </div>
   );
 }
 
