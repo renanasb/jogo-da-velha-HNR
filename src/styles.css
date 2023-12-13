@@ -2,12 +2,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
-}
-
 h1 {
   margin-top: 0;
   font-size: 22px;
@@ -52,23 +46,282 @@ ul {
 
 body {
   font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vb;
+  margin: 0px;
+  background-color: #fff;
 }
 
-.square {
-  background: #fff;
-  border: 1px solid #999;
+.square0 {
+  background: #17181a;
+  border: 1px solid white;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 1px;
   float: left;
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  height: 70px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 70px;
+  
+}
+
+.square1 {
+  background: #17181a;
+  border: 1px solid white;
+  border-top-width: 0px;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 70px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 70px;
+}
+
+.square2 {
+  background: #17181a;
+  border: 1px solid white;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 70px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 70px;
+  border-top-width: 0px;
+  border-right-width: 0px;
+}
+
+.square3 {
+  background: #17181a;
+  border: 1px solid white;
+  border-left-width: 0px;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 70px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 70px;
+}
+
+.square4 {
+  background: #17181a;
+  border: 1px solid white;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  border-bottom-width: 1px;
+  border-top-width: 1px;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 70px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 70px;
+}
+
+.square5 {
+  background: #17181a;
+  border: 1px solid white;
+  border-right-width: 0px;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 70px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 70px;
+}
+
+.square6 {
+  background: #17181a;
+  border: 1px solid white;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 70px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 70px;
+}
+
+.square7 {
+  background: #17181a;
+  border: 1px solid white;
+  border-bottom-width: 0px;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 70px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 70px;
+}
+
+.square8 {
+  background: #17181a;
+  border: 1px solid white;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 70px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 70px;
+}
+
+.square {
+  background: #17181a;
+  border: 1px solid #fff;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 70px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 70px;
+}
+
+.tabuleiro {
+  display:block;
+  text-align: center;
+  background-color: #17181a;
+  box-shadow: 0px 0px 3px aliceblue;
+  border-radius: 8px;
+  padding: 0px;
+  max-width: 570px;
+ max-height: 410px;
+ width: 570px;
+ height: 410px;
+ margin-top: 10px;
+}
+
+.tabuleiroMatrix {
+  display: flex; 
+  justify-content: space-evenly; 
+  flex-wrap: wrap; 
+  flex-direction: column-reverse; 
+  align-content: space-around;
+}
+
+.placar{
+  display: flex; 
+  justify-content: space-around
+}
+
+
+.card-profile {
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 0px;
+  max-width: inherit;
+  max-height: 300px;
+  }
+  
+  
+  .card-profile .title {
+  color: grey;
+  font-size: 18px;
+  }
+  
+  
+  .card-profile button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  }
+  
+  
+  .card-profile a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+  }
+  
+  
+  .card-profile button:hover, a:hover {
+  opacity: 0.7;
+  }
+  
+  .linha{
+    border-top-width: 1; 
+    border-bottom-width: 0;
+  }
+
+.players {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  background-color: #17181a;
+  box-shadow: 0px 0px 3px aliceblue;
+  border-radius: 8px;
+  padding: 0px;
+  max-width: 210px;
+  max-height: 210px;
+ width: 150px;
+ height: 30px;
+ margin-top: 15px; 
+ margin-bottom: 15px
+}
+
+
+
+.center{
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  flex-wrap: wrap;
 }
 
 .board-row:after {
@@ -88,3 +341,13 @@ body {
 .game-info {
   margin-left: 20px;
 }
+
+.img{
+  background-size:auto ;
+  height: 20px;
+  background-image:url(./v1016-b-08.jpg);
+  height: 100vb;
+}
+
+
+
