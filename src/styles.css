@@ -88,3 +88,12 @@ body {
 .game-info {
   margin-left: 20px;
 }
+
+.img{
+  background-size:auto ;
+  height: 20px; 
+  background-image:url(../_bcf6039c-7602-477c-bb4d-408c37a1088a.jpg);
+  height: 100vb;
+}
+
+

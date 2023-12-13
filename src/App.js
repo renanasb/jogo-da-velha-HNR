@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Home } from "./login.js";
 
 function Square({ value, onSquareClick }) {
   return (
@@ -8,6 +10,8 @@ function Square({ value, onSquareClick }) {
   );
 }
 
+function Login() {}
+
 function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i) {
     if (calculateWinner(squares) || squares[i]) {
@@ -15,9 +19,9 @@ function Board({ xIsNext, squares, onPlay }) {
     }
     const nextSquares = squares.slice();
     if (xIsNext) {
-      nextSquares[i] = 'X';
+      nextSquares[i] = "X";
     } else {
-      nextSquares[i] = 'O';
+      nextSquares[i] = "O";
     }
     onPlay(nextSquares);
   }
@@ -25,13 +29,15 @@ function Board({ xIsNext, squares, onPlay }) {
   const winner = calculateWinner(squares);
   let status;
   if (winner) {
-    status = 'Winner: ' + winner;
+    status = "Winner: " + winner;
   } else {
-    status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+    status = "Next player: " + (xIsNext ? "X" : "O");
   }
 
   return (
     <>
+      <img src="../_bcf6039c-7602-477c-bb4d-408c37a1088a.jpg" alt="Imagem do Renan"/>
+
       <div className="status">{status}</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
@@ -64,6 +70,8 @@ export default function Game() {
     setCurrentMove(nextHistory.length - 1);
   }
 
+  function Pag() {}
+
   function jumpTo(nextMove) {
     setCurrentMove(nextMove);
   }
@@ -71,9 +79,9 @@ export default function Game() {
   const moves = history.map((squares, move) => {
     let description;
     if (move > 0) {
-      description = 'Go to move #' + move;
+      description = "Go to move #" + move;
     } else {
-      description = 'Go to game start';
+      description = "Go to game start";
     }
     return (
       <li key={move}>
@@ -83,14 +91,21 @@ export default function Game() {
   });
 
   return (
-    <div className="game">
-      <div className="game-board">
-        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+    <>
+      <Home />
+      <div id="tabela" className="game">
+        <div className="game-board">
+          <Board
+            xIsNext={xIsNext}
+            squares={currentSquares}
+            onPlay={handlePlay}
+          />
+        </div>
+        <div className="game-info">
+          <ol>{moves}</ol>
+        </div>
       </div>
-      <div className="game-info">
-        <ol>{moves}</ol>
-      </div>
-    </div>
+    </>
   );
 }
 
