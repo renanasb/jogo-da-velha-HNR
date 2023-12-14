@@ -36,8 +36,7 @@ function Board({ xIsNext, squares, onPlay }) {
 
   return (
     <>
-      <img src="../_bcf6039c-7602-477c-bb4d-408c37a1088a.jpg" alt="Imagem do Renan"/>
-
+      
       <div className="status">{status}</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
@@ -70,7 +69,7 @@ export default function Game() {
     setCurrentMove(nextHistory.length - 1);
   }
 
-  function Pag() {}
+  // function Pag() {}
 
   function jumpTo(nextMove) {
     setCurrentMove(nextMove);
@@ -93,7 +92,7 @@ export default function Game() {
   return (
     <>
       <Home />
-      <div id="tabela" className="game">
+      {/* <div id="tabela" className="game">
         <div className="game-board">
           <Board
             xIsNext={xIsNext}
@@ -104,7 +103,7 @@ export default function Game() {
         <div className="game-info">
           <ol>{moves}</ol>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
