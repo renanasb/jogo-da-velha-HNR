@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./styles.css";
 
-
 function Square0({ value, onSquareClick }) {
   return (
     <button className="square0" onClick={onSquareClick}>
@@ -66,15 +65,6 @@ function Square7({ value, onSquareClick }) {
   );
 }
 
-// function tabuleiroX( ) {
-// return (
-
-// );
-
-
-// }
-
-
 function Square8({ value, onSquareClick }) {
   return (
     <button className="square8" onClick={onSquareClick}>
@@ -105,95 +95,205 @@ function Board({ xIsNext, squares, onPlay }) {
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
 
+  function TabuleiroPlayers(xIsNext) {
+    if (status === "Next player: X") {
+      return (
+        <div className="placar">
+          <div className="players" style={{ borderBottom: "2px solid white" }}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19px"
+              height="19px"
+              fill="white  "
+              className="bi bi-x-lg"
+              viewBox="0 0 16 16"
+            >
+              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+            </svg>
 
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30px"
+              height="30px"
+              fill="white"
+              className="bi bi-dash"
+              viewBox="0 0 16 16"
+            >
+              <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8" />
+            </svg>
+          </div>
+          <div className="players">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18px"
+              height="18px"
+              fill="white"
+              className="bi bi-circle"
+              viewBox="0 0 16 16"
+            >
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+            </svg>
 
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30px"
+              height="30px"
+              fill="white"
+              className="bi bi-dash"
+              viewBox="0 0 16 16"
+            >
+              <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8" />
+            </svg>
+          </div>
+        </div>
+      );
+    } else if (status === "Next player: O") {
+      return (
+        <div className="placar">
+          <div className="players">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19px"
+              height="19px"
+              fill="white  "
+              className="bi bi-x-lg"
+              viewBox="0 0 16 16"
+            >
+              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+            </svg>
 
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30px"
+              height="30px"
+              fill="white"
+              className="bi bi-dash"
+              viewBox="0 0 16 16"
+            >
+              <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8" />
+            </svg>
+          </div>
+          <div className="players" style={{ borderBottom: "2px solid white" }}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18px"
+              height="18px"
+              fill="white"
+              className="bi bi-circle"
+              viewBox="0 0 16 16"
+            >
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+            </svg>
 
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30px"
+              height="30px"
+              fill="white"
+              className="bi bi-dash"
+              viewBox="0 0 16 16"
+            >
+              <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8" />
+            </svg>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div className="placar">
+          <div className="players">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19px"
+              height="19px"
+              fill="white  "
+              className="bi bi-x-lg"
+              viewBox="0 0 16 16"
+            >
+              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30px"
+              height="30px"
+              fill="white"
+              className="bi bi-dash"
+              viewBox="0 0 16 16"
+            >
+              <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8" />
+            </svg>
+          </div>
+          <div className="players">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18px"
+              height="18px"
+              fill="white"
+              className="bi bi-circle"
+              viewBox="0 0 16 16"
+            >
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30px"
+              height="30px"
+              fill="white"
+              className="bi bi-dash"
+              viewBox="0 0 16 16"
+            >
+              <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8" />
+            </svg>
+          </div>
+        </div>
+      );
+    }
+  }
 
   // let pontuaçãoX;
   // let pontuaçãoO;
   // if (winner = "X") {
-  //   pontuaçãoX = "o"; 
+  //   pontuaçãoX = "o";
   // } else {
   //   pontuaçãoO = "i";
   // }
 
   return (
-      <div className="tabuleiroMatrix">
-        <div className="tabuleiro">
-          <div className="placar">
-            <div className="players">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18px"
-                height="18px"
-                fill="white"
-                className="bi bi-circle"
-                viewBox="0 0 16 16"
-              >
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-              </svg>
+    <div className="tabuleiroMatrix">
+      <div className="tabuleiro">
+        <TabuleiroPlayers />
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30px"
-                height="30px"
-                fill="white"
-                className="bi bi-dash"
-                viewBox="0 0 16 16"
-              >
-                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8" />
-              </svg>
-            </div>
-
-            <div className="players">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="19px"
-                height="19px"
-                fill="white  "
-                className="bi bi-x-lg"
-                viewBox="0 0 16 16"
-              >
-                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-              </svg>
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30px"
-                height="30px"
-                fill="white"
-                className="bi bi-dash"
-                viewBox="0 0 16 16"
-              >
-                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8" />
-              </svg>
-            </div>
+        <hr color="aliceblue" className="linha" />
+        <div
+          style={{
+            marginTop: '70px',
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+         
+          <div className="board-row">
+            <Square0 value={squares[0]} onSquareClick={() => handleClick(0)} />
+            <Square1 value={squares[1]} onSquareClick={() => handleClick(1)} />
+            <Square2 value={squares[2]} onSquareClick={() => handleClick(2)} />
           </div>
-
-          <hr color="aliceblue" className="linha" />
-          <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-          <div className="status" style={{color: "white"}}>{status}</div>
-      <div className="board-row">
-        <Square0 value={squares[0]} onSquareClick={() => handleClick(0)} />
-        <Square1 value={squares[1]} onSquareClick={() => handleClick(1)} />
-        <Square2 value={squares[2]} onSquareClick={() => handleClick(2)} />
-      </div>
-      <div className="board-row">
-        <Square3 value={squares[3]} onSquareClick={() => handleClick(3)} />
-        <Square4 value={squares[4]} onSquareClick={() => handleClick(4)} />
-        <Square5 value={squares[5]} onSquareClick={() => handleClick(5)} />
-      </div>
-      <div className="board-row">
-        <Square6 value={squares[6]} onSquareClick={() => handleClick(6)} />
-        <Square7 value={squares[7]} onSquareClick={() => handleClick(7)} />
-        <Square8 value={squares[8]} onSquareClick={() => handleClick(8)} />
-      </div>
+          <div className="board-row">
+            <Square3 value={squares[3]} onSquareClick={() => handleClick(3)} />
+            <Square4 value={squares[4]} onSquareClick={() => handleClick(4)} />
+            <Square5 value={squares[5]} onSquareClick={() => handleClick(5)} />
+          </div>
+          <div className="board-row">
+            <Square6 value={squares[6]} onSquareClick={() => handleClick(6)} />
+            <Square7 value={squares[7]} onSquareClick={() => handleClick(7)} />
+            <Square8 value={squares[8]} onSquareClick={() => handleClick(8)} />
+          </div>
           <div className="card-profile"></div>
-        </div>
       </div>
-          </div>
-
+        </div>
+    </div>
   );
 }
 
