@@ -66,6 +66,15 @@ function Square7({ value, onSquareClick }) {
   );
 }
 
+// function tabuleiroX( ) {
+// return (
+
+// );
+
+
+// }
+
+
 function Square8({ value, onSquareClick }) {
   return (
     <button className="square8" onClick={onSquareClick}>
@@ -95,6 +104,19 @@ function Board({ xIsNext, squares, onPlay }) {
   } else {
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
+
+
+
+
+
+
+  // let pontuaçãoX;
+  // let pontuaçãoO;
+  // if (winner = "X") {
+  //   pontuaçãoX = "o"; 
+  // } else {
+  //   pontuaçãoO = "i";
+  // }
 
   return (
       <div className="tabuleiroMatrix">
